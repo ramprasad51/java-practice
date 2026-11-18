@@ -59,9 +59,7 @@ void del_info() //3
     cur=first;
     if(cur->usn==key)
     {
-        first=first->link;
-        free(cur);
-        printf("Student with usn %d deleted\n",key);
+        del_front();
         return;
     }
 
@@ -153,7 +151,7 @@ void insert_after_name()
         printf("List is Empty\n");
         return;
     }
-    printf("Enter the name after which new student should b inserted:");
+    printf("Enter the name after which new student should be inserted:");
     scanf("%s",key);
 
     cur=first;
